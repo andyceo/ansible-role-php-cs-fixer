@@ -7,8 +7,8 @@
 
 - name: Download and install andyceo.php-cs-fixer to /usr/local/bin (Global installation)
   command:
-    curl http://get.sensiolabs.org/andyceo.php-cs-fixer.phar -LSso /usr/local/bin/andyceo.php-cs-fixer
-    creates='/usr/local/bin/andyceo.php-cs-fixer'
+    curl http://get.sensiolabs.org/php-cs-fixer.phar -LSso /usr/local/bin/php-cs-fixer
+    creates='/usr/local/bin/php-cs-fixer'
     chdir='/usr/local/bin'
   sudo: yes
 
