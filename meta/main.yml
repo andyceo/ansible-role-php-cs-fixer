@@ -2,8 +2,7 @@
 
 allow_duplicates: no
 
-dependencies:
-  - { role: andyceo.php }
+dependencies: []
 
 galaxy_info:
   author: andyceo
