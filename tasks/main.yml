@@ -2,26 +2,20 @@
 # PHP Coding Standards Fixer: http://cs.sensiolabs.org/
 # Installation documentation: https://github.com/fabpot/PHP-CS-Fixer
 #
-#   sudo curl http://cs.sensiolabs.org/get/andyceo.php-cs-fixer.phar -o /usr/local/bin/andyceo.php-cs-fixer
-#   sudo chmod a+x /usr/local/bin/andyceo.php-cs-fixer
 
-- name: Download and install andyceo.php-cs-fixer to /usr/local/bin (Global installation)
-  command:
-    curl http://get.sensiolabs.org/andyceo.php-cs-fixer.phar -LSso /usr/local/bin/andyceo.php-cs-fixer
-    creates='/usr/local/bin/andyceo.php-cs-fixer'
-    chdir='/usr/local/bin'
-  sudo: yes
+- name: Download and install php-cs-fixer to /usr/local/bin (Global installation)
+  get_url:
+    url: " {{ url }}"
+    dest: "/usr/local/bin/php-cs-fixer"
 
 - name: Make php-cs-fixer executable
   file:
     path=/usr/local/bin/php-cs-fixer
     state=file
     mode=0755
-  sudo: yes
 
 - name: Update php-cs-fixer
   command:
     php-cs-fixer self-update
   register: php_cs_fixer_update
   changed_when: "'updated' in php_cs_fixer_update.stdout"
-  sudo: yes
