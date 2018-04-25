@@ -5,7 +5,7 @@
 
 - name: Download and install php-cs-fixer to /usr/local/bin (Global installation)
   get_url:
-    url: " {{ url }}"
+    url: " {{ php_cs_fixer_url }}"
     dest: "/usr/local/bin/php-cs-fixer"
 
 - name: Make php-cs-fixer executable
