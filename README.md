@@ -1,7 +1,8 @@
 # Ansible Role: php-cs-fixer
 
-Install Drupal Console project (http://cs.sensiolabs.org/)
+Install PHP Coding Standards Fixer (http://cs.sensiolabs.org/)
 
 ## Requirements
 
-Ubuntu 14.04
+* Ubuntu 14.04 or
+* Debian 8+
